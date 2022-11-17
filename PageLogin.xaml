@@ -1,0 +1,35 @@
+﻿<Page x:Class="WPF_Rassokhin_PR_6_YP.PageLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Rassokhin_PR_6_YP"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageLogin" Background="SandyBrown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="550"/>
+            <ColumnDefinition Width="90"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="Gray">
+            <TextBlock Text="Auth" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <TextBox FontSize="20" x:Name="Username" Margin="0,0,0,5" Style="{StaticResource MyWaterMarkStyle}" Tag="Username">
+            </TextBox>
+            <TextBox FontSize="20" x:Name="Password" Margin="0,0,0,5" Style="{StaticResource MyWaterMarkStyle}" Tag="Password">
+            </TextBox>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20" Content="Remember me" Style="{StaticResource Label}"/>
+                <CheckBox x:Name="Remember" Click="Remember_Click" Style="{StaticResource CheckBox}" Checked="Remember_Click"/>
+                <Button x:Name="Log_in" Content="Log in" Style="{StaticResource Button}" Click="Log_in_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
